@@ -1,0 +1,33 @@
+{
+  "name": "ts-skeleton",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "author": "sky3d <sky3ddd@gmail.com>",
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  },
+  "scripts": {
+    "dev": "npx nodemon",
+    "build": "rimraf ./build && npx tsc",
+    "start": "yarn build && node build/main",
+    "lint": "npx eslint ./src",
+    "format": "npx eslint ./src --fix"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^18.11.10",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.29.0",
+    "husky": "^9.0.10",
+    "nodemon": "^3.0.3",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "tsx": "^4.7.0",
+    "typescript": "^4.9.3"
+  }
+}
